@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notion — 클론코딩</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-logo">
+      <div class="logo-icon"><img src="img/logo.png" alt=""></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">제품</a></li>
+      <li><a href="#">AI</a></li>
+      <li><a href="#">솔루션</a></li>
+      <li><a href="#">리소스</a></li>
+      <li><a href="#">대기업</a></li>
+      <li><a href="#">가격</a></li>
+      <li><a href="#">영업팀 문의하기</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="btn-dark">Notion 무료 체험하기</button>
+      <button class="btn-ghost">로그인</button>
+      <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 모바일 메뉴 -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="mobile-links">
+      <li><a href="#" onclick="toggleMenu()">제품</a></li>
+      <li><a href="#" onclick="toggleMenu()">AI</a></li>
+      <li><a href="#" onclick="toggleMenu()">솔루션</a></li>
+      <li><a href="#" onclick="toggleMenu()">리소스</a></li>
+      <li><a href="#" onclick="toggleMenu()">요금제</a></li>
+      <li><a href="#" onclick="toggleMenu()">대기업</a></li>
+      <li><a href="#" onclick="toggleMenu()">가격</a></li>
+    </ul>
+    <div class="mobile-box">
+      <div class="mobile-box-btns">
+        <button class="mobile-box-btn">Notion</button>
+        <button class="mobile-box-btn">Notion 캘린더</button>
+        <button class="mobile-box-btn">Notion 메일</button>
+      </div>
+    </div>
+    <div class="mobile-bottom">
+      <button class="mobile-login">로그인</button>
+      <button class="mobile-download">Notion 앱 다운로드</button>
+    </div>
+  </div>
+
+
+  <section class="hero">
+    <h1>아이디어가 멈추지 않는<br>사람들을 위한 공간</h1>
+    <p>Notion 에이전트는 흩어진 생각을 모아 구조화하고 실행으로 <br>연결하는 올인원 워크스페이스입니다.</p>
+    <div class="hero-cta">
+      <button class="cta-primary">Notion 무료 체험하기</button>
+      <button class="cta-text">영업팀 문의하기</button>
+    </div>
+
+    <div class="hero-video-wrap">
+      <video src="video/notion vid.mp4" autoplay muted loop playsinline></video>
+    </div>
+
+  </section>
+
+  <div class="logos-section fade-up">
+    <p class="logos-label">Forbes Cloud 100대 기업 중 98%가 신뢰하는 Notion</p>
+    <div class="logos-marquee-wrap">
+      <div class="logos-marquee-track">
+        <span class="logo-item">GS</span>
+        <span class="logo-dot"></span>
+        <span class="logo-item">kakaostyle</span>
+        <span class="logo-dot"></span>
+        <span class="logo-item">Duolingo</span>
+        <span class="logo-dot"></span>
+        <span class="logo-item">AIR PREMIA</span>
+        <span class="logo-dot"></span>
+        <span class="logo-item">OpenAI</span>
+        <span class="logo-dot"></span>
+        <span class="logo-item">DEVSISTERS</span>
+        <span class="logo-dot"></span>
+        <span class="logo-item">sendbird</span>
+        <span class="logo-dot"></span>
+        <span class="logo-item">GS</span>
+        <span class="logo-dot"></span>
+        <span class="logo-item">kakaostyle</span>
+        <span class="logo-dot"></span>
+        <span class="logo-item">Duolingo</span>
+        <span class="logo-dot"></span>
+        <span class="logo-item">AIR PREMIA</span>
+        <span class="logo-dot"></span>
+        <span class="logo-item">OpenAI</span>
+        <span class="logo-dot"></span>
+        <span class="logo-item">DEVSISTERS</span>
+        <span class="logo-dot"></span>
+        <span class="logo-item">sendbird</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="features fade-up">
+  <div class="inner">
+    <h2 class="features-title">매일 24시간 <br class="mobile-br"> 근무하는 AI 동료.</h2>
+    <div class="features-body">
+
+      <!-- 왼쪽 상단: 텍스트 영역 -->
+      <div class="features-top-left">
+        <div>
+          <span>커스텀 에이전트 </span>
+          <span class="tag-blue">New</span>
+        </div>
+        <p class="features-subtitle">반복 작업을 자동화하세요.</p>
+        <span class="arrow"></span>
+      </div>
+
+      <!-- 왼쪽 하단: 아코디언 리스트 -->
+      <div class="features-bottom-left">
+        <div class="features-list">
+          <div class="feature-item active" onclick="setFeature(this, 'video/notion vid2.mp4')">
+            <div class="feature-item-top">
+              <div class="feature-item-icon icon-c1">
+                <img src="img/icon1.png" alt="">
+              </div>
+              <div class="feature-item-right">
+                <a href="#" class="feature-item-name" onclick="event.preventDefault()">Q & A 에이전트</a>
+              </div>
+            </div>
+            <div class="feature-item-desc">이미 확보된 정보와 지식을 사용해 질문에 답변합니다.</div>
+          </div>
+          <div class="feature-item" onclick="setFeature(this, 'video/notion vid.mp4')">
+            <div class="feature-item-top">
+              <div class="feature-item-icon icon-c2">
+                <img src="img/icon2.png" alt="">
+              </div>
+              <div class="feature-item-right">
+                <span class="feature-item-name">작업 배정 에이전트</span>
+              </div>
+            </div>
+            <div class="feature-item-desc">담당자를 지정하고, 우선순위를 설정하거나, 작업을 배정하는 일도 알아서 수행합니다.</div>
+          </div>
+          <div class="feature-item" onclick="setFeature(this, 'video/notion vid2.mp4')">
+            <div class="feature-item-top">
+              <div class="feature-item-icon icon-c3">
+                <img src="img/icon3.png" alt="">
+              </div>
+              <div class="feature-item-right">
+                <span class="feature-item-name">보고서 작성 에이전트</span>
+              </div>
+            </div>
+            <div class="feature-item-desc">보고서를 대신 작성·요약하고 전송합니다.</div>
+          </div>
+          <div class="feature-item" onclick="setFeature(this, 'video/notion vid.mp4')">
+            <div class="feature-item-top">
+              <div class="feature-item-icon icon-c4">
+                <img src="img/icon4.png" alt="">
+              </div>
+              <div class="feature-item-right">
+                <span class="feature-item-name">나만의 에이전트 생성</span>
+              </div>
+            </div>
+            <div class="feature-item-desc">반복되는 작업은 커스텀 에이전트에 맡겨 보세요.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 오른쪽: 비디오 (row 전체) -->
+      <div class="features-video">
+        <video class="feat-vid active" src="video/notion vid2.mp4" autoplay muted loop playsinline></video>
+      </div>
+
+    </div>
+
+    <!-- 모바일 아이템 텍스트 -->
+    <div class="mobile-feat-info">
+      <div class="mobile-feat-name" id="mobile-feat-name">Q & A 에이전트</div>
+      <div class="mobile-feat-desc" id="mobile-feat-desc">이미 확보된 정보와 지식을 사용해 질문에 답변합니다.</div>
+      <div class="mobile-feat-dots">
+        <button class="mobile-dot active" onclick="mobileFeat(0)"></button>
+        <button class="mobile-dot" onclick="mobileFeat(1)"></button>
+        <button class="mobile-dot" onclick="mobileFeat(2)"></button>
+        <button class="mobile-dot" onclick="mobileFeat(3)"></button>
+      </div>
+    </div>
+
+    <!-- 하단: 타이틀 + 5개 카드 -->
+    <div class="features-bottom">
+      <p class="features-bottom-title">커스텀 에이전트로 할 수 있는 일</p>
+      <div class="features-cards">
+        <div class="feat-card">
+          <div class="feat-card-icon icon-c5"><img src="img/icon5.png" alt=""></div>
+          <div class="feat-card-name">제품 피드백 분류</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-card-icon icon-c6"><img src="img/icon6.png" alt=""></div>
+          <div class="feat-card-name">Slack 지원 티켓 해결</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-card-icon icon-c7"><img src="img/icon7.png" alt=""></div>
+          <div class="feat-card-name">보안 알림에 더 빠르게 대응</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-card-icon icon-c8"><img src="img/icon8.png" alt=""></div>
+          <div class="feat-card-name">주간 리포트 작업 자동화</div>
+        </div>
+        <div class="feat-card feat-card-overlap">
+          <div class="feat-card-icon-overlap">
+            <div class="overlap-circle icon-c9"><img src="img/icon9.png" alt=""></div>
+            <div class="overlap-circle icon-c10"><img src="img/icon10.png" alt=""></div>
+            <div class="overlap-circle icon-c11"><img src="img/icon11.png" alt=""></div>
+          </div>
+          <div class="feat-card-name">나만의 커스텀 에이전트 생성</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <section class="hl-section fade-up">
+    <div class="inner">
+      <h2 class="hl-title">필요할 때 언제든지 요청하세요.</h2>
+      <div class="hl-grid">
+        <!-- 상단: 큰 카드 1개 -->
+        <div class="hl-card hl-card-large">
+          <div class="hl-card-left">
+            <div><span>Notion 에이전트 </span></div>
+            <p class="features-subtitle">작업을 배정하면, Notion <br> 에이전트가 알아서 처리합니다.</p>
+            <span class="arrow"></span>
+          </div>
+          <div class="hl-card-right">
+            <img class="hl-img-base" src="img/notion3.png" alt="">
+            <img class="hl-img-mid" src="img/notion4.png" alt="">
+            <img class="hl-img-top" src="img/notion_icon.png" alt="">
+          </div>
+        </div>
+        <!-- 하단: 카드 2개 -->
+        <div class="hl-card hl-card-small hl-small-1">
+          <div class="hl-small-text">
+            <div>
+              <span>기업 통합 검색 </span>
+            </div>
+            <div class="text1">
+              <p class="features-subtitle">모든 검색을 한 번에.</p>
+              <span class="arrow"></span>
+            </div>
+          </div>
+          <div class="hl-small1">
+            <img class="small-img" src="img/notion_bot1.png" alt="">
+            <img class="small-icon" src="img/notion_bot_icon.png" alt="">
+          </div>
+        </div>
+        <div class="hl-card hl-card-small hl-small-2">
+          <div class="hl-small-text">
+            <div>
+              <span>AI 노트 </span>
+            </div>
+            <div class="text2">
+              <p class="features-subtitle">늘 완벽하게 작성되는 회의록</p>
+              <span class="arrow"></span>
+            </div>
+          </div>
+          <div class="hl-small2">
+            <img class="small-img" src="img/notion_bot2.png" alt="">
+            <img class="small-icon" src="img/notion_bot_icon2.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hl-section-2 fade-up">
+    <div class="inner">
+      <h2 class="hl-title">모든 작업을 <br class="mobile-br"> 한곳에서 관리하세요.</h2>
+      <div class="hl-grid-2">
+        <!-- 상단: 카드 2개 -->
+        <div class="hl-card hl-card-small hl-small-1">
+          <div class="hl-small-text">
+            <div><span>문서</span></div>
+            <div class="text3">
+              <p class="features-subtitle">심플하면서도 강력한 기능</p>
+              <span class="arrow"></span>
+            </div>
+          </div>
+          <div class="hl-small3">
+            <img class="small-top" src="img/notion_top1.png" alt="">
+            <img class="small-bot" src="img/notion_top2.png" alt="">
+          </div>
+        </div>
+        <div class="hl-card hl-card-small hl-small-2">
+          <div class="hl-small-text">
+            <div><span>지식 베이스 </span></div>
+            <div class="text4">
+              <p class="features-subtitle">모든 팀원과 에이전트가 한곳에 <br> 저장된 같은 정보를 사용합니다.</p>
+              <span class="arrow"></span>
+            </div>
+          </div>
+          <div class="hl-small4">
+            <img class="small-img" src="img/notion_top3.png" alt="">
+          </div>
+        </div>
+        <!-- 하단: 큰 카드 1개 -->
+        <div class="hl-card hl-card-large-2">
+          <div class="hl-card-left">
+            <div><span>프로젝트 </span></div>
+            <p class="features-subtitle">헌황 추적에 쓰는 시간을 <br> 줄이고, 실제 일에 집중하세요</p>
+            <span class="arrow"></span>
+          </div>
+          <div class="hl-card-right2">
+            <img class="hl-img-base" src="img/notion6.png" alt="">
+            <img class="hl-img-mid" src="img/notion5.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hl-bottom-banner">
+      <p class="hl-bottom-text">"AI의 모든 것을 담은 앱."</p>
+      <img class="hl-bottom-img" src="img/banner_icon.png" alt="">
+    </div>
+  </section>
+
+
+  <section class="pricing-hero fade-up">
+
+    <div class="inner">
+
+      <div class="pricing-hero-top">
+        <div class="pricing-hero-left">
+          <h2 class="pricing-hero-title">생산성을 올리고, <br> 사용하는 툴은 줄이고</h2>
+          <p class="pricing-hero-sub">모든 툴과 팀을 한곳에 모으고, 절감 비용을 바로 확인해 보세요.</p>
+          <button class="pricing-hero-btn">요금제 보기→</button>
+        </div>
+
+        <div class="pricing-hero-right">
+          <img src="img/pricing.png" alt="">
+        </div>
+      </div>
+
+      <div class="pricing-box">
+        <!-- 체크리스트 -->
+        <ul class="pricing-checklist">
+          <li>
+            <label class="check-item">
+              <input type="checkbox" checked onchange="calcPrice()">
+              <span class="check-name">AI 검색</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-item">
+              <input type="checkbox" checked onchange="calcPrice()">
+              <span class="check-name">AI 챗봇</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-item">
+              <input type="checkbox" onchange="calcPrice()">
+              <span class="check-name">AI 노트</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-item">
+              <input type="checkbox" onchange="calcPrice()">
+              <span class="check-name">AI 글쓰기 도우미</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-item">
+              <input type="checkbox" onchange="calcPrice()">
+              <span class="check-name">AI 이메일 앱</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-item">
+              <input type="checkbox" onchange="calcPrice()">
+              <span class="check-name">AI 리서치</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-item">
+              <input type="checkbox" onchange="calcPrice()">
+              <span class="check-name">캘린더 일정 잡기</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-item">
+              <input type="checkbox" onchange="calcPrice()">
+              <span class="check-name">팀 위키</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-item">
+              <input type="checkbox" onchange="calcPrice()">
+              <span class="check-name">프로젝트 관리 툴</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-item">
+              <input type="checkbox" onchange="calcPrice()">
+              <span class="check-name">기본 CRM</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-item">
+              <input type="checkbox" onchange="calcPrice()">
+              <span class="check-name">사이트 빌더</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-item">
+              <input type="checkbox" onchange="calcPrice()">
+              <span class="check-name">폼</span>
+            </label>
+          </li>
+        </ul>
+
+        <!-- 구분선 -->
+        <div class="pricing-divider"></div>
+
+        <!-- 인원수 + 절감액 일렬 -->
+        <div class="pricing-bottom-row">
+          <div class="pricing-counter">
+            <span class="counter-label">인원수</span>
+            <button class="counter-btn" onclick="changeCount(-1)">−</button>
+            <span class="counter-num" id="member-count">1</span>
+            <button class="counter-btn" onclick="changeCount(1)">+</button>
+            <span class="counter-unit">명</span>
+          </div>
+          <div class="pricing-savings">
+            <div class="saving-item">
+              <span class="saving-label">월간 절감액</span>
+              <span class="saving-value" id="monthly-saving">₩0</span>
+            </div>
+            <div class="saving-divider"></div>
+            <div class="saving-item">
+              <span class="saving-label">연간 절감액</span>
+              <span class="saving-value highlight-saving" id="yearly-saving">₩0</span>
+            </div>
+          </div>
+          <div class="pricing-total-wrap">
+            <span class="pricing-total-label">월 예상 금액</span>
+            <span class="pricing-total-num" id="total-price">₩15,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="social-section fade-up">
+    <div class="inner">
+
+      <h2 class="social-hero-title">결과로 말하는 팀이 <br class="mobile-br"> 믿고 쓰는 Notion</h2>
+
+      <div class="social-card-large">
+        <div class="social-large-left">
+          <img class="social-large-title" src="img/openai.png" alt="">
+          <p class="social-large-desc">"모든 업무를 처리할 수 있는 <br class="mobile-br"> 하나의 <br>강력한 플랫폼, <br class="mobile-br">
+            그곳이 바로 Notion입니다."</p>
+          <a href="#" class="social-large-btn">더보기 →</a>
+        </div>
+        <div class="social-large-right" onclick="openModal()">
+          <img src="img/social_thumb.png" alt="">
+          <div class="play-overlay">
+            <div class="play-circle">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 유튜브 모달 -->
+      <div class="yt-modal" id="yt-modal" onclick="closeModal(event)">
+        <div class="yt-modal-inner">
+          <button class="yt-close" onclick="closeModal()">✕</button>
+          <iframe width="1410" height="793" src="https://www.youtube.com/embed/HubmluaaFmc"
+            title="OpenAI turns shared knowledge into faster workflows" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
+
+      <div class="social-grid">
+        <div class="social-card">
+          <a href="#"></a>
+          <img src="img/toyota.png" alt="">
+          <p>워크플로를 간소화해 전체 일정을 1/3로 <br> 줄였습니다.</p>
+        </div>
+        <div class="social-card">
+          <a href="#"></a>
+          <img src="img/ramp.png" alt="">
+          <p>회의 사이 잠깐이면, 3분 만에 에이전트를 만들 수 있어요. 덕분에 몇 시간 걸리던 구동 작업 부담이 훨씬 줄었죠.</p>
+        </div>
+        <div class="social-card">
+          <a href="#"></a>
+          <img src="img/vercel.png" alt="">
+          <p>Notion은 하나의 툴로 많은 문제를 해결할 수 <br> 있다는 것을 보여줍니다.</p>
+        </div>
+        <div class="social-card">
+          <a href="#"></a>
+          <img src="img/match.png" alt="">
+          <p>Notion은 워크플로를 간소화하는 가장 강력하고 <br> 영향력 있는 툴입니다.</p>
+        </div>
+        <div class="social-card">
+          <a href="#"></a>
+          <img src="img/cursor.png" alt="">
+          <p>Notion같은 AI네이티브 툴은 중요한 경쟁력이 <br> 되어줍니다.</p>
+        </div>
+        <div class="social-card">
+          <a href="#"></a>
+          <img src="img/Figma-logo.png" alt="">
+          <p>업무와 AI를 통합하는 하나의 허브 공간으로 모두가 정보를 공유하면서 업무 흐름을 원활하게 유지할 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <span>#AI 기업 통합 검색 1위 (G2)</span>
+          <span class="marquee-dot">·</span>
+          <span>#AI 글쓰기 1위 (G2)</span>
+          <span class="marquee-dot">·</span>
+          <span>Fortune 100대 기업 중 62%가 사용</span>
+          <span class="marquee-dot">·</span>
+          <span>YC 기업의 50% 이상</span>
+          <span class="marquee-dot">·</span>
+          <span>140만 명이 넘는 커뮤니티 멤버</span>
+          <span class="marquee-dot">·</span>
+          <span>1억 명 이상의 전 세계 사용자</span>
+          <span class="marquee-dot">·</span>
+          <span>#3년 연속 지식 베이스 1위 (G2)</span>
+          <span class="marquee-dot">·</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bento-section fade-up">
+    <div class="inner">
+      <h2 class="bento-title">더 스마트하게 일하는 방법</h2>
+      <div class="bento-grid">
+
+        <!-- 왼쪽: 큰 카드 -->
+        <div class="bento-card bento-large">
+          <img class="bento-l-img1" src="img/bento_icon1.png" alt="">
+          <div class="bento-l-text">
+            <p class="bento-label">Notion 시작하기</p>
+            <p class="bento-desc">에이전트가 내장된 나만의 AI 워크스페이스.</p>
+            <div class="bento-btns">
+              <a href="#" class="bento-btn-solid">Windows로 다운로드하기</a>
+              <a href="#" class="bento-btn-solid"><img src="img/microsoft.png" alt="">
+                <p>Microsoft Store<br><span>에서 다운로드</span></p>
+              </a>
+              <a href="#" class="bento-btn-solid bento-btn-mobile-only"><img src="img/android.png" alt="">안드로이드용
+                다운로드하기</a>
+            </div>
+          </div>
+          <div class="bento-l-img2-wrap">
+            <img class="bento-l-img2" src="img/bento_img1.png" alt="">
+          </div>
+        </div>
+
+        <!-- 오른쪽: 카드 2개 위아래 -->
+        <div class="bento-right">
+          <div class="bento-card bento-small">
+            <div class="bento-s-left">
+              <img class="bento-s-img1" src="img/bento_icon2.png" alt="">
+              <p class="bento-label">Notion 메일</p>
+              <p class="bento-desc">나를 이해하는 AI 수신함.</p>
+              <a href="#" class="bento-btn-outline">다운로드하기</a>
+            </div>
+            <div class="bento-s-img2-wrap">
+              <img class="bento-s-img2" src="img/bento_img2.png" alt="">
+            </div>
+          </div>
+          <div class="bento-card bento-small">
+            <div class="bento-s-left">
+              <img class="bento-s-img1" src="img/bento_icon3.png" alt="">
+              <p class="bento-label">Notion 캘린더</p>
+              <p class="bento-desc">시간 관리, 일정 잡기, 작업을 모두 한곳에서.</p>
+              <a href="#" class="bento-btn-outline">다운로드하기</a>
+            </div>
+            <div class="bento-s-img2-wrap">
+              <img class="bento-s-img2" src="img/bento_img3.png" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/footer_icon.png" alt="">
+          <div class="footer-sns">
+            <a href="#" class="sns-btn"><img src="img/sns_x.png" alt="X"></a>
+            <a href="#" class="sns-btn"><img src="img/sns_instagram.png" alt="Instagram"></a>
+            <a href="#" class="sns-btn"><img src="img/sns_linkedin.png" alt="LinkedIn"></a>
+            <a href="#" class="sns-btn"><img src="img/sns_youtube.png" alt="YouTube"></a>
+            <a href="#" class="sns-btn"><img src="img/sns_facebook.png" alt="Facebook"></a>
+          </div>
+          <div class="footer-lang-wrap">
+            <button class="footer-lang-btn" onclick="toggleLang(event)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              <span id="lang-label">한국어</span>
+            </button>
+            <div class="lang-dropdown" id="lang-dropdown">
+              <button onclick="selectLang('한국어', this)">한국어</button>
+              <button onclick="selectLang('English', this)">English</button>
+              <button onclick="selectLang('日本語', this)">日本語</button>
+              <button onclick="selectLang('中文', this)">中文</button>
+              <button onclick="selectLang('Français', this)">Français</button>
+              <button onclick="selectLang('Deutsch', this)">Deutsch</button>
+            </div>
+          </div>
+          <p class="footer-bottom">© 2026 Notion Labs, Inc. — 클론코딩 학습 목적</p>
+        </div>
+        <div class="footer-col">
+          <h4>회사 소개</h4>
+          <ul>
+            <li><a href="#">Notion 소개</a></li>
+            <li><a href="#">채용</a></li>
+            <li><a href="#">보안</a></li>
+            <li><a href="#">서비스 상태</a></li>
+            <li><a href="#">이용약관 및 개인정보 보호정책</a></li>
+            <li><a href="#">개인정보 보호 권한</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>다운로드</h4>
+          <ul>
+            <li><a href="#">iOS & Android</a></li>
+            <li><a href="#">Mac & Windows</a></li>
+            <li><a href="#">메일</a></li>
+            <li><a href="#">캘린더</a></li>
+            <li><a href="#">Web Clipper</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>자료</h4>
+          <ul>
+            <li><a href="#">도움말 센터</a></li>
+            <li><a href="#">요금제</a></li>
+            <li><a href="#">블로그</a></li>
+            <li><a href="#">커뮤니티</a></li>
+            <li><a href="#">API 통합</a></li>
+            <li><a href="#">템플릿</a></li>
+            <li><a href="#">파트너 프로그램</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>용도별</h4>
+          <ul>
+            <li><a href="#">회사</a></li>
+            <li><a href="#">팀</a></li>
+            <li><a href="#">개인</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileFeats = [
+      { name: '문서 & 위키', desc: '팀의 지식을 체계적으로 정리하고 모든 문서를 한 곳에서 관리하세요.' },
+      { name: '프로젝트 & 태스크', desc: '보드, 타임라인, 캘린더 등 다양한 뷰로 프로젝트를 관리하세요.' },
+      { name: 'Notion AI', desc: 'AI가 문서 작성, 요약, 번역을 도와드립니다.' },
+      { name: '연동 & 통합', desc: 'Slack, GitHub, Figma 등 100개 이상의 도구와 원활하게 연동됩니다.' },
+    ];
+    let mobileFeatIdx = 0;
+
+    if (window.innerWidth <= 480) {
+      document.querySelectorAll('.feat-vid').forEach(v => {
+        v.src = 'video/notion_vid_mobile.mp4';
+        v.load();
+      });
+    }
+
+    function mobileFeat(idx) {
+      mobileFeatIdx = idx;
+      document.querySelectorAll('.feat-vid').forEach((v, i) => {
+        v.classList.toggle('active', i === idx);
+        if (i === idx) v.play();
+      });
+      document.getElementById('mobile-feat-name').innerText = mobileFeats[mobileFeatIdx].name;
+      document.getElementById('mobile-feat-desc').innerText = mobileFeats[mobileFeatIdx].desc;
+      document.querySelectorAll('.mobile-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === idx);
+      });
+    }
+    function toggleMenu() {
+      document.getElementById('hamburger').classList.toggle('open');
+      document.getElementById('mobile-menu').classList.toggle('open');
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    function setFeature(el, idx) {
+      document.querySelectorAll('.feature-item').forEach(item => item.classList.remove('active'));
+      el.classList.add('active');
+      document.querySelectorAll('.feat-vid').forEach((v, i) => {
+        const isActive = i === idx;
+        v.classList.toggle('active', isActive);
+        if (isActive) { v.play(); }
+      });
+    }
+
+    let count = 1;
+
+    function calcPrice() {
+      const checkboxes = document.querySelectorAll('.pricing-checklist input[type=checkbox]');
+      const prices = [10000, 5000, 3000, 8000, 2000, 4000, 3000, 6000, 5000, 4000, 7000, 2000];
+      let base = 0;
+      checkboxes.forEach((cb, i) => { if (cb.checked) base += prices[i]; });
+      const total = base * count;
+      const monthlySaving = base * 0.2;
+      const yearlySaving = monthlySaving * 12;
+      document.getElementById('total-price').innerText = '₩' + total.toLocaleString();
+      document.getElementById('monthly-saving').innerText = monthlySaving > 0 ? '₩' + Math.round(monthlySaving).toLocaleString() : '₩0';
+      document.getElementById('yearly-saving').innerText = yearlySaving > 0 ? '₩' + Math.round(yearlySaving).toLocaleString() : '₩0';
+    }
+
+    function changeCount(dir) {
+      count = Math.max(1, count + dir);
+      document.getElementById('member-count').innerText = count;
+      calcPrice();
+    }
+
+    calcPrice();
+
+    function openModal() {
+      const modal = document.getElementById('yt-modal');
+      document.body.appendChild(modal);
+      modal.classList.add('open');
+    }
+
+    function closeModal(e) {
+      if (e && e.target !== document.getElementById('yt-modal') && !e.target.classList.contains('yt-close')) return;
+      const modal = document.getElementById('yt-modal');
+      modal.classList.remove('open');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal({ target: document.getElementById('yt-modal') });
+    });
+
+    function toggleLang(e) {
+      e.stopPropagation();
+      document.getElementById('lang-dropdown').classList.toggle('open');
+    }
+
+    function selectLang(lang, el) {
+      document.getElementById('lang-label').innerText = lang;
+      document.querySelectorAll('.lang-dropdown button').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('lang-dropdown').classList.remove('open');
+    }
+
+    document.addEventListener('click', () => {
+      document.getElementById('lang-dropdown')?.classList.remove('open');
+    });
+
+    if (window.innerWidth <= 480) {
+      document.querySelector('.bento-title').innerText = '무료로 체험하세요.';
+    }
+  </script>
+
+</body>
+
+</html>
