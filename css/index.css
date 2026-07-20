@@ -403,8 +403,11 @@ nav {
 }
 
 .logos-marquee-wrap {
+    display: flex;
+justify-content: center;
+    max-width: 900px;
     overflow: hidden;
-    position: relative;
+    margin: 0 auto;
 }
 
 .logos-marquee-wrap::before,
@@ -2660,15 +2663,6 @@ footer {
 
     .pricing-counter {
         gap: 10px;
-    }
-
-    .pricing-total-wrap {
-        width: 100%;
-        align-items: center;
-    }
-
-    .pricing-counter {
-        gap: 20px;
     }
 
     .social-section {
